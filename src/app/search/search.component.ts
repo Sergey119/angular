@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-@Component({
+@Component({    // обеспечивает навигацию по сайту
   selector: 'app-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
