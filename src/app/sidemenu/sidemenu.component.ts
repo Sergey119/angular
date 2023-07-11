@@ -1,6 +1,8 @@
+// Компонент содержимого бокового меню
+
 import { Component } from '@angular/core';
 
-@Component({    // меню, включает в себя верхнее и боковое меню
+@Component({
   selector: 'app-sidemenu',
   templateUrl: './sidemenu.component.html',
   styleUrls: ['./sidemenu.component.css']

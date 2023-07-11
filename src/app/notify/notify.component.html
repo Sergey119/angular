@@ -1,3 +1,7 @@
-<p>notify works!</p>
 
-    
+<button mat-icon-button (click)="toggleData(); shouldShow = !shouldShow">
+    <mat-icon>notifications</mat-icon>
+</button>
+<div *ngIf="toDisplay" [ngClass]="{show: shouldShow, hide: !shouldShow}">
+    <p>Click the below button to display and hide the data</p>
+</div>

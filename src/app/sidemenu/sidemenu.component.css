@@ -1,12 +1,12 @@
 .container {
-    min-height: 100Vh;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-  }
-  .sidenav {
-    padding: 30px;
-    min-width: 300px;
-    background-color: rgb(146, 166, 255);
-  }
-  .sidenav-content { 
-    height: 50px;
-  }
+  min-height: 100Vh;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.sidenav {
+  padding: 30px;
+  min-width: 300px;
+  background-color: rgb(146, 166, 255);
+}
+.sidenav-content { 
+  height: 50px;
+}

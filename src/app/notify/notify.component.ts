@@ -7,10 +7,16 @@ import { SomeDataService } from '../notlist/notlist.service';
   styleUrls: ['./notify.component.css']
 })
 export class NotifyComponent {
+  toDisplay = true;
+  shouldShow = true;
 
   constructor(private someSrv: SomeDataService) {
     console.log(someSrv.data)
     someSrv.data = 3
+  }
+
+  toggleData() {
+	  this.toDisplay = !this.toDisplay;
   }
 }
 
