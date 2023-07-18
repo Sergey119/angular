@@ -1,6 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { CustomComponentComponent } from '../custom-component/custom-component.component';
-import { ICustom } from '../interfaces/interfaces';
 
 @Component({
   selector: 'app-move-button',
@@ -21,10 +19,12 @@ export class MoveButtonComponent implements OnInit{
 
   constructor() { }
 
-  @Input() custom:ICustom;
-  @Output() outChange: EventEmitter<ICustom> = new EventEmitter<ICustom>();
+  custom: string = ""
 
-  update() {
-    this.outChange.emit(this.custom);
+  @Output() outChange: EventEmitter<string> = new EventEmitter<string>();
+
+  change(){
+    this.custom = "this.custom";
+    this.outChange.emit(this.custom)
   }
 }

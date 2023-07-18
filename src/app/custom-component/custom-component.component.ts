@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ICustom } from '../interfaces/interfaces';
+import { MoveButtonComponent } from '../move-button/move-button.component';
 
 @Component({
   selector: 'app-custom-component',
@@ -8,15 +8,16 @@ import { ICustom } from '../interfaces/interfaces';
 })
 export class CustomComponentComponent {
 
-  selectedCustom: ICustom;
+  message:string = '';
 
   constructor() { }
  
   ngOnInit() {
   }
 
-  update(custom:ICustom) {
-    console.log(custom);
+  update(o: string) {
+    this.message = o;
+    console.log(this.message);
     alert("Custom")
   }
 }
