@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { CustomComponentComponent } from '../custom-component/custom-component.component';
+import { ICustom } from '../interfaces/interfaces';
 
 @Component({
   selector: 'app-move-button',
@@ -6,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./move-button.component.css']
 })
 export class MoveButtonComponent implements OnInit{
+
   act: string = "move";
   currentAct: string = '';
 
@@ -16,4 +19,12 @@ export class MoveButtonComponent implements OnInit{
     this.currentAct = s;
   }
 
+  constructor() { }
+
+  @Input() custom:ICustom;
+  @Output() outChange: EventEmitter<ICustom> = new EventEmitter<ICustom>();
+
+  update() {
+    this.outChange.emit(this.custom);
+  }
 }

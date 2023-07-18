@@ -36,6 +36,7 @@ import { ToWorkButtonComponent } from './to-work-button/to-work-button.component
 import { LogComponent } from './log/log.component';
 import { DateRangeComponent } from './date-range/date-range.component';
 import { ViewComponent } from './view/view.component';
+import { CustomComponentComponent } from './custom-component/custom-component.component';
 
 // определение маршрутов
 const appRoutes: Routes =[
@@ -67,6 +68,7 @@ export class CustomTitleResolver {
     LogComponent,
     DateRangeComponent,
     ViewComponent,
+    CustomComponentComponent,
   ],
   imports: [
     DropdownModule,
