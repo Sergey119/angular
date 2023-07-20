@@ -1,8 +1,8 @@
 <mat-form-field>
     <mat-label>Период просмотра</mat-label>
     <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
-      <input matStartDate  [(ngModel)]="date1" formControlName="start" placeholder="Start date">
-      <input matEndDate  [(ngModel)]="date2" formControlName="end" placeholder="End date">
+      <input matStartDate #start [(ngModel)]="date1" (dateInput)="changeS(start.value)" formControlName="start" placeholder="Start date">
+      <input matEndDate #end [(ngModel)]="date2" (dateInput)="changeE(end.value)" formControlName="end" placeholder="End date">
     </mat-date-range-input>
     <mat-hint>ММ/ДД/ГГГГ – ММ/ДД/ГГГГ</mat-hint>
     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>

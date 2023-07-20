@@ -1,4 +1,4 @@
-import {Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-action-button',
@@ -7,10 +7,11 @@ import {Component, OnInit } from '@angular/core';
 })
 export class ActionButtonComponent implements OnInit{
   currentAct: string = '';
+  @Input() acts:string[] = [];
 
-  ngOnInit(): void {};
-
-  acts = ['Вернуть в план','Возврат'];
+  ngOnInit(): void {
+    console.log(this.acts)
+  };
 
   get(s: string): void {
     console.log(s);

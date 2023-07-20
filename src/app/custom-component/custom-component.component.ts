@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class CustomComponentComponent {
 
   message:string = '';
+  acs:string[]=['Вернуть в план','Возврат']
 
   constructor() { }
  
@@ -17,5 +18,13 @@ export class CustomComponentComponent {
   update(o: string) {
     this.message = o;
     console.log(this.message);
+  }
+
+  move(o: any) {
+    console.log(o);
+  }
+
+  work(o: any) {
+    console.log(o);
   }
 }

@@ -7,14 +7,11 @@ import { Observable, Subject } from 'rxjs';
 
 export class MyService {
 
-    methodS$: Observable<any>;
-    methodE$: Observable<any>;
+    public methodS$: Subject<any> = new Subject<any>();
+    public methodE$: Subject<any> = new Subject<any>();
     private myMethodSubject = new Subject<any>();
 
-    constructor() {
-        this.methodS$ = this.myMethodSubject.asObservable();
-        this.methodE$ = this.myMethodSubject.asObservable();
-    }
+    constructor() {}
 
     methodS(data1: any) {
         this.myMethodSubject.next(data1);

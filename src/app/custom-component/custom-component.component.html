@@ -1,1 +1,3 @@
-<app-move-button (outChange)="update($event)" ></app-move-button>
+<app-move-button (outChange)="move($event)" [classname]="'white'" text="Переименовать"></app-move-button>
+<app-move-button (outChange)="work($event)" [classname]="'blue'" text="В работу"></app-move-button>
+<app-action-button [acts]="acs"></app-action-button>

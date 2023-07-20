@@ -13,34 +13,6 @@ export class DateRangeComponent implements OnInit{
     end: new FormControl<Date | null>(null),
   });
 
-  // currentStart: object;
-  // currentEnd: object;
-  // startChange($event: { target: { value: any; }; }): void {
-  //   console.log($event);
-  //   this.currentStart = $event;
-  // };
-  // endChange($event: { target: { value: any; }; }): void {
-  //   console.log($event);
-  //   this.currentEnd = $event;
-  // }
-
-  // currentStart: object;
-
-  // dateInput($event: { target: { value: any; }; }): void {
-  //   console.log($event);
-  //   this.currentStart = $event;
-  // };
-
-  // onSelected(event: any, flag: boolean): void
-  // {
-  //   let search_params = this.bodyResolution.search_params.getValue();
-  //   if (flag === true)
-  //   {
-  //     search_params.period_start = 
-  //   }
-  //   this.bodyResolution.search_params.next(search_params)
-  // }
-
   date1: any;
   date2: any;
   
@@ -49,11 +21,16 @@ export class DateRangeComponent implements OnInit{
     this.date2;
   }
 
-  public constructor(private myService: MyService) {
-    this.myService.methodS(this.date1);
-    console.log(this.date1);
-    this.myService.methodE(this.date2);
-    console.log(this.date2);
-  };
+  public constructor(private myService: MyService) {};
+
+  changeS(e: any){
+    this.myService.methodS$?.next(this.date1);
+    console.log("changeS", e, this.date1)
+  }
+
+  changeE(e: any){
+    this.myService.methodE$?.next(this.date2);
+    console.log("changeE", e, this.date2)
+  }
   
 }

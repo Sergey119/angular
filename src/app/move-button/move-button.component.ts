@@ -7,10 +7,15 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class MoveButtonComponent implements OnInit{
 
+  @Input() classname = "white";
+  @Input() text = "";
+
   act: string = "move";
   currentAct: string = '';
 
-  ngOnInit(): void {};
+  ngOnInit(): void {
+    console.log('classname', this.classname)
+  };
 
   get(s: string): void {
     console.log(s);

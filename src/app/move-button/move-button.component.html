@@ -1,4 +1,5 @@
 <app-log [act]="currentAct"></app-log>  
 <section>
-    <button mat-raised-button (click)="change()" (click)="get(act)">Переместить</button>
+    <button mat-raised-button (click)="change()" (click)="get(act)"
+    [ngClass]="{'white':classname=='white', 'blue':classname=='blue'}">{{text}}</button>
 </section>
