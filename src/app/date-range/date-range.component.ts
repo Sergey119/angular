@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {NgIf, JsonPipe} from '@angular/common';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatNativeDateModule} from '@angular/material/core';
+import { MyService } from '../service.service';
 
 @Component({
   selector: 'app-date-range',
@@ -16,18 +13,47 @@ export class DateRangeComponent implements OnInit{
     end: new FormControl<Date | null>(null),
   });
 
-  currentStart: object;
-  currentEnd: object;
+  // currentStart: object;
+  // currentEnd: object;
+  // startChange($event: { target: { value: any; }; }): void {
+  //   console.log($event);
+  //   this.currentStart = $event;
+  // };
+  // endChange($event: { target: { value: any; }; }): void {
+  //   console.log($event);
+  //   this.currentEnd = $event;
+  // }
 
-  startChange($event: { target: { value: any; }; }): void {
-    console.log($event);
-    this.currentStart = $event;
-  };
+  // currentStart: object;
+
+  // dateInput($event: { target: { value: any; }; }): void {
+  //   console.log($event);
+  //   this.currentStart = $event;
+  // };
+
+  // onSelected(event: any, flag: boolean): void
+  // {
+  //   let search_params = this.bodyResolution.search_params.getValue();
+  //   if (flag === true)
+  //   {
+  //     search_params.period_start = 
+  //   }
+  //   this.bodyResolution.search_params.next(search_params)
+  // }
+
+  date1: any;
+  date2: any;
   
-  endChange($event: { target: { value: any; }; }): void {
-    console.log($event);
-    this.currentEnd = $event;
+  ngOnInit(){
+    this.date1;
+    this.date2;
   }
 
-  ngOnInit(): void {};
+  public constructor(private myService: MyService) {
+    this.myService.methodS(this.date1);
+    console.log(this.date1);
+    this.myService.methodE(this.date2);
+    console.log(this.date2);
+  };
+  
 }

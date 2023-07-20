@@ -37,6 +37,8 @@ import { LogComponent } from './log/log.component';
 import { DateRangeComponent } from './date-range/date-range.component';
 import { ViewComponent } from './view/view.component';
 import { CustomComponentComponent } from './custom-component/custom-component.component';
+import { TableImitationComponent } from './table-imitation/table-imitation.component';
+import { MyService } from './service.service';
 
 // определение маршрутов
 const appRoutes: Routes =[
@@ -69,6 +71,7 @@ export class CustomTitleResolver {
     DateRangeComponent,
     ViewComponent,
     CustomComponentComponent,
+    TableImitationComponent,
   ],
   imports: [
     DropdownModule,
@@ -107,6 +110,7 @@ export class CustomTitleResolver {
     TableDynamicObservableDataExample
   ],
   providers: [
+    MyService,
     {
       provide: TitleStrategy,
       useClass: TemplatePageTitleStrategy

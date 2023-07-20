@@ -24,7 +24,7 @@ export class MoveButtonComponent implements OnInit{
   @Output() outChange: EventEmitter<string> = new EventEmitter<string>();
 
   change(){
-    this.custom = "this.custom";
+    this.custom = "custom";
     this.outChange.emit(this.custom)
   }
 }

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { MoveButtonComponent } from '../move-button/move-button.component';
 
 @Component({
   selector: 'app-custom-component',
@@ -18,6 +17,5 @@ export class CustomComponentComponent {
   update(o: string) {
     this.message = o;
     console.log(this.message);
-    alert("Custom")
   }
 }
