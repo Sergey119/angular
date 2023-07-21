@@ -20,11 +20,11 @@ export class CustomComponentComponent {
     console.log(this.message);
   }
 
-  move(o: any) {
-    console.log(o);
+  rename(o: any) {
+    console.log("Переим",o);
   }
 
   work(o: any) {
-    console.log(o);
+    console.log("В р",o);
   }
 }

@@ -1,0 +1,16 @@
+.white{
+    background-color: #fff;
+}
+.blue{
+    background-color: #00f!important;
+}
+.button-gray{
+    background-color: #D4D8D9!important;
+    color: black!important;
+    height: 56px;
+}
+.button-blue{
+    background-color: #002597!important;
+    color: white!important;
+    height: 56px;
+}

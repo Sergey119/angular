@@ -11,6 +11,7 @@
     <mat-error *ngIf="range.controls.start.hasError('matStartDateInvalid')">Неверная начальная дата</mat-error>
     <mat-error *ngIf="range.controls.end.hasError('matEndDateInvalid')">Неверная конечная дата</mat-error>
 </mat-form-field>
+
 <p>Выбранный период: {{range.value | json}}</p>
 <p>{{ date1 }}</p>
 <p>{{ date2 }}</p>

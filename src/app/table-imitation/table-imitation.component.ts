@@ -9,10 +9,9 @@ import { MyService } from '../service.service';
 export class TableImitationComponent implements OnInit{
   public data1: any;
   public data2: any;
+  public data3: any;
 
-  public constructor(private myService: MyService) {
-
-  }
+  public constructor(private myService: MyService) {}
 
   ngOnInit() {
     this.myService.methodS$?.subscribe((data1) => {
@@ -20,6 +19,9 @@ export class TableImitationComponent implements OnInit{
     });
     this.myService.methodE$?.subscribe((data2) => {
       this.data2 = data2;
+    });
+    this.myService.methodB$?.subscribe((data3) => {
+      this.data3 = data3;
     });
   }
 

@@ -9,9 +9,7 @@ export class ActionButtonComponent implements OnInit{
   currentAct: string = '';
   @Input() acts:string[] = [];
 
-  ngOnInit(): void {
-    console.log(this.acts)
-  };
+  ngOnInit(): void {};
 
   get(s: string): void {
     console.log(s);

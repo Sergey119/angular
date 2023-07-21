@@ -1,0 +1,7 @@
+<app-log [act]="currentAct"></app-log>  
+<section>
+    <button mat-raised-button ngDefaultControl [(ngModel)]="text" (click)="change()" (click)="get(act)"
+    [ngClass]="{
+        'button-gray':classname=='button-gray',
+        'button-blue':classname=='button-blue'}">{{text}}</button>
+</section>

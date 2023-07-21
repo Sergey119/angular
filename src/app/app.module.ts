@@ -31,7 +31,7 @@ import { SettingsComponent } from './settings/settings.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ActionButtonComponent } from './action-button/action-button.component';
-import { MoveButtonComponent } from './move-button/move-button.component';
+import { ButtonComponent } from './button/button.component';
 import { ToWorkButtonComponent } from './to-work-button/to-work-button.component';
 import { LogComponent } from './log/log.component';
 import { DateRangeComponent } from './date-range/date-range.component';
@@ -64,7 +64,7 @@ export class CustomTitleResolver {
     SettingsComponent,
     NotFoundComponent,
     NavbarComponent,
-    MoveButtonComponent,
+    ButtonComponent,
     ToWorkButtonComponent,
     ActionButtonComponent,
     LogComponent,
