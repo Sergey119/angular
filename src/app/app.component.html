@@ -1,7 +1,7 @@
-<mat-drawer-container class="container" autosize>
+<mat-drawer-container autosize>
 
     <!-- Боковая панель -->
-    <mat-drawer #drawer class="sidenav" closed mode="side">
+    <mat-drawer class="sidenav" opened mode="side">
         <app-sidemenu></app-sidemenu>
     </mat-drawer>
 
@@ -10,9 +10,6 @@
 
         <!-- Верхняя панель -->
         <mat-toolbar>
-            <button mat-icon-button color="basic" (click)="drawer.toggle()">
-                <mat-icon>menu</mat-icon>
-            </button>
 
             <app-navbar></app-navbar>
 

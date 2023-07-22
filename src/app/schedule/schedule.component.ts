@@ -1,24 +1,10 @@
 // Таблица со значениями
 
-import { Component } from '@angular/core';
-import {DataSource} from '@angular/cdk/collections';
-import {Observable, ReplaySubject} from 'rxjs';
+import {Component, OnInit} from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
-import {MatButtonModule} from '@angular/material/button';
+import { MyService } from '../service.service';
 
-export interface ScheduleComponent {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
-
-const ELEMENT_DATA: ScheduleComponent[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-];
 
 @Component({
   selector: 'app-schedule',
@@ -27,39 +13,30 @@ const ELEMENT_DATA: ScheduleComponent[] = [
   standalone: true,
   imports: [MatButtonModule, MatTableModule],
 })
-export class TableDynamicObservableDataExample {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataToDisplay = [...ELEMENT_DATA];
 
-  dataSource = new ExampleDataSource(this.dataToDisplay);
+export class TableDynamicObservableDataExample implements OnInit{
 
-  addData() {
-    const randomElementIndex = Math.floor(Math.random() * ELEMENT_DATA.length);
-    this.dataToDisplay = [...this.dataToDisplay, ELEMENT_DATA[randomElementIndex]];
-    this.dataSource.setData(this.dataToDisplay);
+  public data1: any;
+  public data2: any;
+  public data3: any;
+
+  constructor(private myService: MyService) {}
+
+  ngOnInit() {
+    this.myService.methodS$?.subscribe((data1) => {
+      this.data1 = data1;
+      console.log("data1");
+    });
+    this.myService.methodE$?.subscribe((data2) => {
+      this.data2 = data2;
+      console.log("data2");
+    });
+    this.myService.methodB$?.subscribe((data3) => {
+      this.data3 = data3;
+      console.log("data3");
+    });
   }
 
-  removeData() {
-    this.dataToDisplay = this.dataToDisplay.slice(0, -1);
-    this.dataSource.setData(this.dataToDisplay);
-  }
-}
-
-class ExampleDataSource extends DataSource<ScheduleComponent> {
-  private _dataStream = new ReplaySubject<ScheduleComponent[]>();
-
-  constructor(initialData: ScheduleComponent[]) {
-    super();
-    this.setData(initialData);
-  }
-
-  connect(): Observable<ScheduleComponent[]> {
-    return this._dataStream;
-  }
-
-  disconnect() {}
-
-  setData(data: ScheduleComponent[]) {
-    this._dataStream.next(data);
-  }
+  displayedColumns: string[] = ['name'];
+  
 }

@@ -10,9 +10,12 @@ export class CustomComponentComponent {
   message:string = '';
   acs:string[]=['Вернуть в план','Возврат']
 
+  currentStyles: Record<string, string> = {};
+
   constructor() { }
  
   ngOnInit() {
+    this.currentStyles = {'margin-right': '10px'};
   }
 
   update(o: string) {

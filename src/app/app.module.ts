@@ -5,7 +5,6 @@ import { AppComponent, TemplatePageTitleStrategy } from './app.component';
 import { NotifyComponent } from './notify/notify.component';
 import { SearchComponent } from './search/search.component';
 import { SidemenuComponent } from './sidemenu/sidemenu.component';
-import { TableDynamicObservableDataExample } from './schedule/schedule.component';
 import {SomeDataService} from './notlist/notlist.service';
 
 import {Routes, RouterModule, TitleStrategy} from '@angular/router';
@@ -23,6 +22,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatNativeDateModule} from '@angular/material/core';
+import {MatTableModule} from '@angular/material/table';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -39,6 +39,8 @@ import { ViewComponent } from './view/view.component';
 import { CustomComponentComponent } from './custom-component/custom-component.component';
 import { TableImitationComponent } from './table-imitation/table-imitation.component';
 import { MyService } from './service.service';
+import { ActionsBarComponent } from './actions-bar/actions-bar.component';
+import { TableDynamicObservableDataExample } from "./schedule/schedule.component";
 
 // определение маршрутов
 const appRoutes: Routes =[
@@ -55,68 +57,70 @@ export class CustomTitleResolver {
 }
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NotifyComponent,
-    SearchComponent,
-    SidemenuComponent,
-    ProfileComponent,
-    SettingsComponent,
-    NotFoundComponent,
-    NavbarComponent,
-    ButtonComponent,
-    ToWorkButtonComponent,
-    ActionButtonComponent,
-    LogComponent,
-    DateRangeComponent,
-    ViewComponent,
-    CustomComponentComponent,
-    TableImitationComponent,
-  ],
-  imports: [
-    DropdownModule,
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatButtonModule,
-    MatIconModule,
-    MatDividerModule,
-            ButtonModule, RippleModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    FormsModule,
-    RouterModule.forRoot(appRoutes),
-    TableDynamicObservableDataExample,
-    MatSelectModule,
-    MatDatepickerModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatNativeDateModule
-  ],
-  exports: [
-    DropdownModule,
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatButtonModule,
-    MatIconModule,
-    MatDividerModule,
-    ButtonModule,
-    ReactiveFormsModule,
-    TableDynamicObservableDataExample
-  ],
-  providers: [
-    MyService,
-    {
-      provide: TitleStrategy,
-      useClass: TemplatePageTitleStrategy
-    },
-    SomeDataService,
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        NotifyComponent,
+        SearchComponent,
+        SidemenuComponent,
+        ProfileComponent,
+        SettingsComponent,
+        NotFoundComponent,
+        NavbarComponent,
+        ButtonComponent,
+        ToWorkButtonComponent,
+        ActionButtonComponent,
+        LogComponent,
+        DateRangeComponent,
+        ViewComponent,
+        CustomComponentComponent,
+        TableImitationComponent,
+        ActionsBarComponent,
+    ],
+    exports: [
+        MatTableModule,
+        DropdownModule,
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        MatSidenavModule,
+        MatButtonModule,
+        MatIconModule,
+        MatDividerModule,
+        ButtonModule,
+        ReactiveFormsModule,
+    ],
+    providers: [
+        MyService,
+        {
+            provide: TitleStrategy,
+            useClass: TemplatePageTitleStrategy
+        },
+        SomeDataService,
+    ],
+    bootstrap: [AppComponent],
+    imports: [
+        MatTableModule,
+        DropdownModule,
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        MatSidenavModule,
+        MatButtonModule,
+        MatIconModule,
+        MatDividerModule,
+        ButtonModule, RippleModule,
+        HttpClientModule,
+        ReactiveFormsModule,
+        FormsModule,
+        RouterModule.forRoot(appRoutes),
+        MatSelectModule,
+        MatDatepickerModule,
+        MatInputModule,
+        MatFormFieldModule,
+        MatNativeDateModule,
+        TableDynamicObservableDataExample
+    ]
 })
 export class AppModule { }
