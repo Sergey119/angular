@@ -26,7 +26,6 @@ import {MatTableModule} from '@angular/material/table';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ProfileComponent } from './profile/profile.component';
 import { SettingsComponent } from './settings/settings.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -40,11 +39,15 @@ import { CustomComponentComponent } from './custom-component/custom-component.co
 import { TableImitationComponent } from './table-imitation/table-imitation.component';
 import { MyService } from './service.service';
 import { ActionsBarComponent } from './actions-bar/actions-bar.component';
-import { TableDynamicObservableDataExample } from "./schedule/schedule.component";
+import { TableComponent } from "./table/table.component";
+import { PageComponent } from './page/page.component';
+import { TitleComponent } from './title/title.component';
+import { TuneComponent } from './tune/tune.component';
+import { ScheduleComponent } from './schedule/schedule.component';
 
 // определение маршрутов
 const appRoutes: Routes =[
-  { path: '', component: ProfileComponent, data: {title: 'Страница профиля'}},
+  { path: '', component: ScheduleComponent, data: {title: 'Страница графика работ'}},
   { path: 'settings', component: SettingsComponent, data: {title: 'Страница настроек'}},
   { path: '**', component: NotFoundComponent, data: {title: 'Error page'}}
 ];
@@ -62,7 +65,6 @@ export class CustomTitleResolver {
         NotifyComponent,
         SearchComponent,
         SidemenuComponent,
-        ProfileComponent,
         SettingsComponent,
         NotFoundComponent,
         NavbarComponent,
@@ -75,6 +77,10 @@ export class CustomTitleResolver {
         CustomComponentComponent,
         TableImitationComponent,
         ActionsBarComponent,
+        PageComponent,
+        TitleComponent,
+        TuneComponent,
+        ScheduleComponent,
     ],
     exports: [
         MatTableModule,
@@ -120,7 +126,7 @@ export class CustomTitleResolver {
         MatInputModule,
         MatFormFieldModule,
         MatNativeDateModule,
-        TableDynamicObservableDataExample
+        TableComponent
     ]
 })
 export class AppModule { }

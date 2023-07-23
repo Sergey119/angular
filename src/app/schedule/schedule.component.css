@@ -1,11 +1,5 @@
-.demo-table {
-    width: 100%;
-  }
-  
-  .demo-button-container {
-    padding-bottom: 16px;
-  }
-  
-  .demo-button + .demo-button {
-    margin-left: 8px;
-  }
+.m{
+    padding: 50px;
+    background-color: #ECF0F1;
+    height: 700px;
+}

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./actions-bar.component.css']
 })
 export class ActionsBarComponent {
-
+  currentStyles: Record<string, string> = {'margin-right': '300px'};
 }

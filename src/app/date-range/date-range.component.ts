@@ -13,8 +13,6 @@ export class DateRangeComponent implements OnInit{
     end: new FormControl<Date | null>(null),
   });
 
-  currentStyles: Record<string, string> = {'margin-right': '400px'};
-
   date1: any;
   date2: any;
   

@@ -1,0 +1,14 @@
+table {
+  border: 1px solid #69c; /* Цвет фона таблицы */
+  padding-left: auto;
+  padding-right: auto;
+}
+td, th {
+  background: rgb(255, 255, 255); /* Цвет фона ячеек */
+  padding: 5px; /* Поля вокруг текста */
+  width: 250px; /* Ширина ячеек */
+  border: 1px solid #69c;
+}
+td {
+  height: 80px; /* Ширина ячеек */
+}
