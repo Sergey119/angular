@@ -44,7 +44,6 @@ import { TitleComponent } from './title/title.component';
 import { TuneComponent } from './tune/tune.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { ProfileComponent } from './profile/profile.component';
-import { DropComponentComponent } from './drop-component/drop-component.component';
 
 // определение маршрутов
 const appRoutes: Routes =[
@@ -83,7 +82,6 @@ export class CustomTitleResolver {
         TuneComponent,
         ScheduleComponent,
         ProfileComponent,
-        DropComponentComponent
     ],
     exports: [
         MatTableModule,
