@@ -3,7 +3,6 @@
 // боковой панели
 
 import { Component, Input } from '@angular/core';
-import { NgOptimizedImage } from '@angular/common'
 
 @Component({
   selector: 'app-navbar',
@@ -11,7 +10,7 @@ import { NgOptimizedImage } from '@angular/common'
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  //imagePath: string = "pic.jpg";
-  @Input() image: string = "assets/myimage.jpg";
-  @Input() currentStyles: Record<string, string> = {'margin-right': '600px'};
+  @Input() currentStyles: Record<string, string> =
+  {'margin-right': '600px', 'margin-left': '8px', 'margin-top': '6px'};
+  @Input() pass: Record<string, string> = {'margin-right': '50px'};
 }

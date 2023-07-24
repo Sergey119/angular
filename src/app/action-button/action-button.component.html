@@ -2,9 +2,10 @@
     <mat-form-field>
         <mat-label>Действие</mat-label>
         <mat-select>
-            <mat-option
+            <mat-option mat-raised-button ngDefaultControl 
             *ngFor="let act of acts"
-            (click)="get(act)"
+            (click)="change(act)"
+            [(ngModel)]="text"
             >{{act}}</mat-option>
         </mat-select>
     </mat-form-field>

@@ -36,6 +36,10 @@ export class TableComponent implements OnInit{
       this.data3 = data3;
       console.log("data3");
     });
+    this.myService.methodD$?.subscribe((data4) => {
+      this.data4 = data4;
+      console.log("data4");
+    });
   }
 
   

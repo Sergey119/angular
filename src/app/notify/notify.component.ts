@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./notify.component.css']
 })
 export class NotifyComponent {
-  toDisplay = false;
+  // toDisplay = false;
 
-  toggleData() {
-	  this.toDisplay = !this.toDisplay;
-  }
+  // toggleData() {
+	//   this.toDisplay = !this.toDisplay;
+  // }
 }
 

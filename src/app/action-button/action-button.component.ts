@@ -1,4 +1,5 @@
-import {Component, Input, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { MyService } from '../service.service';
 
 @Component({
   selector: 'app-action-button',
@@ -6,14 +7,22 @@ import {Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./action-button.component.css'],
 })
 export class ActionButtonComponent implements OnInit{
-  currentAct: string = '';
+
+  public constructor(private myService: MyService) {};
+
+  @Output() outChange: EventEmitter<string> = new EventEmitter<string>();
   @Input() acts:string[] = [];
+  @Input() text = "";
+  custom: string = ""
 
-  ngOnInit(): void {};
+  ngOnInit(){}
 
-  get(s: string): void {
+  change(s: string){
     console.log(s);
-    this.currentAct = s;
+    this.custom = "custom";
+    this.outChange.emit(this.custom);
+    this.myService.methodD$?.next(s);
+    console.log("change", s);
   }
 
 }

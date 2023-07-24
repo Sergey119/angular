@@ -10,6 +10,7 @@ export class MyService {
     public methodS$: Subject<any> = new Subject<any>();
     public methodE$: Subject<any> = new Subject<any>();
     public methodB$: Subject<any> = new Subject<any>();
+    public methodD$: Subject<any> = new Subject<any>();
     private myMethodSubject = new Subject<any>();
 
     constructor() {}
@@ -27,5 +28,10 @@ export class MyService {
     methodB(data3: any) {
       this.myMethodSubject.next(data3);
       console.log(data3);
+    }
+
+    methodD(data4: any) {
+      this.myMethodSubject.next(data4);
+      console.log(data4);
     }
 }

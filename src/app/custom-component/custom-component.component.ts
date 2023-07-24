@@ -30,4 +30,8 @@ export class CustomComponentComponent {
   work(o: any) {
     console.log("В р",o);
   }
+
+  drop(o: any) {
+    console.log("Drop",o);
+  }
 }

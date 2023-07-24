@@ -7,5 +7,5 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent {
-  favoriteColorControl = new FormControl('Поиск по системе...');
+  favoriteColorControl = new FormControl('');
 }
