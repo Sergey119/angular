@@ -5,7 +5,6 @@ import { AppComponent, TemplatePageTitleStrategy } from './app.component';
 import { NotifyComponent } from './notify/notify.component';
 import { SearchComponent } from './search/search.component';
 import { SidemenuComponent } from './sidemenu/sidemenu.component';
-import {SomeDataService} from './notlist/notlist.service';
 
 import {Routes, RouterModule, TitleStrategy} from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -102,7 +101,6 @@ export class CustomTitleResolver {
             provide: TitleStrategy,
             useClass: TemplatePageTitleStrategy
         },
-        SomeDataService,
     ],
     bootstrap: [AppComponent],
     imports: [

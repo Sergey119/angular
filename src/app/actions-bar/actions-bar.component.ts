@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-actions-bar',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./actions-bar.component.css']
 })
 export class ActionsBarComponent {
-  currentStyles: Record<string, string> = {'margin-right': '300px'};
+  @Input() currentStyles: Record<string, string> = {'margin-right': '300px'};
 }

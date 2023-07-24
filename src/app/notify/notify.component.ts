@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { SomeDataService } from '../notlist/notlist.service';
 
 @Component({  // компонент отвечает за пользовательские уведомления
   selector: 'app-notify',
@@ -8,11 +7,6 @@ import { SomeDataService } from '../notlist/notlist.service';
 })
 export class NotifyComponent {
   toDisplay = false;
-
-  constructor(private someSrv: SomeDataService) {
-    console.log(someSrv.data)
-    someSrv.data = 3
-  }
 
   toggleData() {
 	  this.toDisplay = !this.toDisplay;

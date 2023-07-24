@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({    // обеспечивает навигацию по сайту
   selector: 'app-search',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent {
-
+  favoriteColorControl = new FormControl('Поиск по системе...');
 }

@@ -2,7 +2,8 @@
 // без кнопки раскрывания
 // боковой панели
 
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common'
 
 @Component({
   selector: 'app-navbar',
@@ -10,5 +11,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-
+  //imagePath: string = "pic.jpg";
+  @Input() image: string = "assets/myimage.jpg";
+  @Input() currentStyles: Record<string, string> = {'margin-right': '600px'};
 }

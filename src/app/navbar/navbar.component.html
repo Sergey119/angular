@@ -1,13 +1,8 @@
 <div class="nav">
-    <span>My App</span>
-
-    <app-search></app-search>
-
-    <app-notify></app-notify>
-
-    <button mat-icon-button>
-        <mat-icon>favorite</mat-icon>
-    </button>
+    <app-search [ngStyle]="currentStyles"></app-search>
+    <app-notify ></app-notify>
+    <!-- <img src="assets/myimage.jpg" class="round" alt="image" height="50"/> -->
+    <img [src]="image" class="round" alt="image" height="50"/>
 </div>
 
 

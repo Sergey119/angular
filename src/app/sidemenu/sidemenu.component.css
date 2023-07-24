@@ -1,1 +1,6 @@
-.mat-icon{color: rgb(255 255 255);}
+.mat-icon{
+    color: white;
+}
+.mat-icon:hover{
+    color: rgb(180, 200, 240);
+}
